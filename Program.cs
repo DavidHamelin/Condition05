@@ -10,6 +10,8 @@ namespace Condition05
     {
         static void Main(string[] args)
         {
+            /* Tableau comportant les différents degrés de puissance d'une tornade
+            La deuxieme colonne indique les conséquences en fonction du degrés de puissance */
             string[,] fujita = new string[,] {
                 {"F0","Dégâts légers: certains dommages sont subis par les cheminées, les antennes de télévision, les bardeaux, les arbres, les enseignes et les fenêtres."},
                 {"F1","Dégâts modérés : les automobiles sont renversées, les abris pour automobiles détruits et les arbres déracinés."},
@@ -22,27 +24,30 @@ namespace Condition05
             Console.WriteLine("Veuillez indiquer le type d'un tornade (compris entre F0 et F5) :");
             string userAnswer = Console.ReadLine();
 
-            //Console.WriteLine(fujita[0,1]);
+            // ligne de code TEST tableau multidimensionnel : Console.WriteLine(fujita[0,1]);
 
             switch (userAnswer)
             {
-                case ("F0"):
+                case "F0":
                     Console.WriteLine(fujita[0,1]);
                     break;
-                case ("F1"):
+                case "F1":
                     Console.WriteLine(fujita[1,1]);
                     break;
-                case ("F2"):
+                case "F2":
                     Console.WriteLine(fujita[2,1]);
                     break;
-                case ("F3"):
+                case "F3":
                     Console.WriteLine(fujita[3,1]);
                     break;
-                case ("F4"):
+                case "F4":
                     Console.WriteLine(fujita[4,1]);
                     break;
-                case ("F5"):
+                case "F5":
                     Console.WriteLine(fujita[5,1]);
+                    break;
+                default:
+                    Console.WriteLine("Erreur");
                     break;
             }
                     
